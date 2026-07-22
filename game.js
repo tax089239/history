@@ -3,7 +3,15 @@ const config = {
     width: 800,
     height: 600,
     parent: 'game-container',
-    pixelArt: true,
+    backgroundColor: '#101827',
+    pixelArt: false,
+    antialias: true,
+    scale: {
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+        width: 800,
+        height: 600
+    },
     physics: {
         default: 'arcade',
         arcade: {
@@ -16,11 +24,10 @@ const config = {
 
 const game = new Phaser.Game(config);
 
-// 跨 Scene 遊戲狀態記錄
 game.gameState = {
     badges: {
-        elder: false,    // 石器族長 (發票)
-        baby: false,     // 釋迦寶寶 (稅金用途)
-        cloud: false     // 雲端精靈 (雲端發票)
+        elder: false,
+        baby: false,
+        cloud: false
     }
 };
