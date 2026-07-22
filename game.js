@@ -49,3 +49,7 @@ game.gameState = {
         cloud: false
     }
 };
+
+window.addEventListener("resize", () => {
+    game.scale.refresh();
+});
